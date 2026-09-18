@@ -16,9 +16,9 @@ public class LoginTest {
     public LoginTest() {
     }
 
-    /**
-     * Test of checkUserName method, of class Login.
-     */
+    
+     //Test of checkUserName method.
+     
     @Test
     public void testCheckUserName() {
         System.out.println("checkUserName");
@@ -30,9 +30,9 @@ public class LoginTest {
        
     }
 
-    /**
-     * Test of checkPasswordComplexity method, of class Login.
-     */
+    
+     //Test of checkPasswordComplexity method.
+     
     @Test
     public void testCheckPasswordComplexity() {
         System.out.println("checkPasswordComplexity");
@@ -44,9 +44,9 @@ public class LoginTest {
         
     }
 
-    /**
-     * Test of checkCellPhoneNumber method, of class Login.
-     */
+    
+     //Test of checkCellPhoneNumber method.
+     
     @Test
     public void testCheckCellPhoneNumber() {
         System.out.println("checkCellPhoneNumber");
@@ -58,9 +58,9 @@ public class LoginTest {
        
     }
 
-    /**
-     * Test of registerUser method, of class Login.
-     */
+    
+     // Test of registerUser method.
+     
     @Test
     public void testRegisterUser() {
         System.out.println("registerUser");
@@ -76,9 +76,9 @@ public class LoginTest {
    
     }
 
-    /**
-     * Test of loginUser method, of class Login.
-     */
+    
+     //Test of loginUser method.
+     
     @Test
     public void testLoginUser() {
         System.out.println("loginUser");
@@ -93,9 +93,9 @@ public class LoginTest {
         
     }
 
-    /**
-     * Test of returnLoginStatus method, of class Login.
-     */
+    
+     //Test of returnLoginStatus method.
+     
     @Test
     public void testReturnLoginStatus() {
         System.out.println("returnLoginStatus");
