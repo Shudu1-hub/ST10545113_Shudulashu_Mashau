@@ -58,7 +58,8 @@ public class Registration {
             System.out.println(login.returnLoginStatus(FirstName, LastName, Username, Password, loginUsername, loginPassword));
             
             boolean loginStatus = login.loginUser(Username, Password, loginUsername, loginPassword);
-            
+
+            // message chat
             if (loginStatus) {
                 
                 System.out.println("Welcome to QuickChat.");
