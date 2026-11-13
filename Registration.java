@@ -6,9 +6,8 @@ package com.mycompany.registration;
 
 /**
  *
- * @author Student
+ * @author Shudulashu Mashau
  */
-
 
 import java.util.Scanner;
 
@@ -58,13 +57,12 @@ public class Registration {
             System.out.println(login.returnLoginStatus(FirstName, LastName, Username, Password, loginUsername, loginPassword));
             
             boolean loginStatus = login.loginUser(Username, Password, loginUsername, loginPassword);
-
-            // message chat
+            
             if (loginStatus) {
                 
                 System.out.println("Welcome to QuickChat.");
                 System.out.println("option 1) send Messages");
-                System.out.println("option 2) Show recently sent messsages - Coming Soon");
+                System.out.println("option 2) Show recently sent messages");
                 System.out.println("option 3) Quit");
                 
                 int option = Integer.parseInt(sc.nextLine());
@@ -104,8 +102,58 @@ public class Registration {
                         break;
                         
                     case 2 :
-                        System.out.println(" Coming soon.");
-                        break;
+                        System.out.println("""
+                                           ---- STORED MESSAGE MENU ----
+                                           
+                                           a) Display the sender and recipient of all stored messages.
+                                           b) Display the longest stored message.
+                                           c) Search for a message ID and display the corresponding recipient and message.
+                                           d) Search for all the messages stored for a particular recipient.
+                                           e) Delete a message using the message hash.
+                                           f) Display a report that lists the full details of all the stored messages.
+                                           """) ;
+                        System.out.print("Select an option: ");
+                        
+                        String reportChoice = sc.nextLine().toLowerCase();
+                        
+                        switch(reportChoice) {
+                            
+                            case "a":
+                                MessageReport.displaySenderRecipient();
+                                break;
+                               
+                            case "b":
+                                MessageReport.displayLongestMessage();
+                                break;
+                                
+                            case "c":
+                                System.out.print("Enter Message ID: ");
+                                String id = sc.nextLine();
+                                MessageReport.searchMessageID(id);
+                                break;
+                                
+                            case "d":
+                                System.out.print("Enter Recipient: ");
+                                String recipientSearch = sc.nextLine();
+                                MessageReport.searchRecipient(recipientSearch);
+                                break;
+                                
+                            case "e":
+                                System.out.print("Enter Message Hash: ");
+                                String hash = sc.nextLine();
+                                MessageReport.deleteMessage(hash);
+                                break;
+                                
+                            case "f":
+                                MessageReport.displayReport();
+                                break;
+                                
+                            default:
+                                System.out.println("Invalid selection. ");
+                                    
+                        }
+                     break;
+                        
                         
                     case 3 :
                         System.out.println(" Goodbye.");
@@ -113,7 +161,7 @@ public class Registration {
                         break;
                         
                     default:
-                        System.out.println("invaild option entered, please enter correct option. ");
+                        System.out.println("Invaild option entered, please enter correct option. ");
                         
                        
                         
@@ -130,3 +178,5 @@ public class Registration {
                        
     }
 }
+
+
